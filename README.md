@@ -1,0 +1,1 @@
+# Tydzien_2_lekcja_7_warunki
