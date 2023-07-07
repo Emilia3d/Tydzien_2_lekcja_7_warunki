@@ -66,7 +66,7 @@ class Program
         Console.WriteLine("Podaj swój wiek. Sprawdzę, czy możesz być posłem.");
         string age = Console.ReadLine();
         int notToYoung = int.Parse(age);
-
+        //ZAMIENIĆ warunki od najstarszego
         if (notToYoung >= 21)
         {
             Console.WriteLine("Możesz być posłem, a nawet premierem.");
