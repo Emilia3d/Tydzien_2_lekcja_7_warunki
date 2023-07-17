@@ -52,21 +52,21 @@ class Program
         //ex.4
         Console.WriteLine("Podaj rok i sprawdź czy jest rokiem przestępnym:");
         string varYear = Console.ReadLine();
-        int isLeap = int.Parse(varYear);
+        int year = int.Parse(varYear);
 
-        if ((isLeap % 400 == 0) || (isLeap % 4 == 0 && isLeap % 100 != 0))
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
         {
-            Console.WriteLine($" Rok {isLeap} jest przestępny.");
+            Console.WriteLine($" Rok {year} jest przestępny.");
         }
         else
         {
-            Console.WriteLine($" Rok {isLeap} nie jest przestępny.");
+            Console.WriteLine($" Rok {year} nie jest przestępny.");
         }
         //ex.5
         Console.WriteLine("Podaj swój wiek. Sprawdzę, czy możesz być posłem.");
         string age = Console.ReadLine();
         int notToYoung = int.Parse(age);
-        
+
         if (notToYoung >= 35)
         {
             Console.WriteLine("Możesz być posłem, premierem, senatorem, a nawet prezydentem.\"");
@@ -75,7 +75,7 @@ class Program
         {
             Console.WriteLine("Możesz być posłem, premierem lub senatorem.");
         }
-        else if (notToYoung >= 21) 
+        else if (notToYoung >= 21)
         {
             Console.WriteLine("Możesz być posłem, nawet premierem.");
         }
@@ -138,6 +138,7 @@ class Program
         }
 
         //ex. 8
+        //DO POPRAWY
         {
             Console.WriteLine("Podaj wynik z egzaminu z matematyki:");
             string inputMath = Console.ReadLine();
@@ -321,11 +322,18 @@ class Program
                     result = number1 * number2;
                     break;
                 case 4:
-                    result = number1 / number2;
+                    if (number2 != 0)
+                    {
+                        result = number1 / number2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("pamiętaj cholero, nie dziel przez zero");
+                    }
                     break;
                 default:
                     Console.WriteLine("Nieprawidłowy numer operacji.");
-                    break;
+                    return;
             }
 
             Console.WriteLine("Twój wynik to: " + result);
