@@ -138,7 +138,7 @@ class Program
         }
 
         //ex. 8
-        //DO POPRAWY
+        
         {
             Console.WriteLine("Podaj wynik z egzaminu z matematyki:");
             string inputMath = Console.ReadLine();
@@ -158,7 +158,7 @@ class Program
             {
                 Console.WriteLine("Kandydat dopuszczony do rekrutacji.");
             }
-            else if ((scoreMath > 150) && (scorePhisics > 150 || scoreChemistry > 150))
+            else if (scoreMath && scorePhisics > 150 || scoreMath && scoreChemistry > 150)
             {
                 Console.WriteLine("Kandydat dopuszczony do rekrutacji.");
             }
